@@ -72,3 +72,13 @@ nav a:hover {
   box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
   text-align: justify;
 }
+
+.code-block {
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-family: "Courier New", monospace;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
