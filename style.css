@@ -31,10 +31,11 @@ h1 {
   background-color: rgba(18, 63, 244, 0.318);
   font-size: 1.5rem;
   height: 50px;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 400px; /* Beispielwert, passe es nach Bedarf an */
+  /* max-width: 400px; Beispielwert, passe es nach Bedarf an */
   margin: 10px auto; /* Zentriert den Container horizontal */
   border-radius: 5px;
 }
