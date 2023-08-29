@@ -1,0 +1,74 @@
+/* Import von Font Awesome am Anfang der CSS-Datei */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+/* Reset für alle Elemente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grundlegende Styles für das HTML und den Body */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: bisque;
+}
+
+/* Header-Styles */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 10px;
+}
+
+/* Navigationsleisten-Styles */
+.nav-container {
+  background-color: rgba(18, 63, 244, 0.318);
+  font-size: 1.5rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px; /* Beispielwert, passe es nach Bedarf an */
+  margin: 10px auto; /* Zentriert den Container horizontal */
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgba(18, 63, 244, 0.417);
+  border-radius: 5px;
+}
+
+/* About-Me-Styles */
+.about-me {
+  width: 400px;
+  height: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
+  text-align: justify;
+}
