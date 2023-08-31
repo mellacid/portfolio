@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(139, 205, 255);
+}
+#timer {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+#controls {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.control-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#startAutoButton {
+  background-color: #28a745;
+  color: white;
+}
+
+#startAutoButton:hover {
+  background-color: #218838;
+  box-shadow: 1px 1px 1px 1px #1d7632;
+  color: white;
+}
+
+#startManualButton {
+  background-color: #007bff;
+  color: white;
+}
+#startManualButton:hover {
+  background-color: #0069d9;
+  box-shadow: 1px 1px 1px 1px #0062cc;
+  color: white;
+}
+
+#startPauseButton {
+  background-color: #ffc107;
+  color: black;
+}
+#startPauseButton:hover {
+  background-color: #e0a800;
+  box-shadow: 1px 1px 1px 1px #d39e00;
+  color: black;
+}
+
+#resetButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+#resetButton:hover {
+  background-color: #c82333;
+  box-shadow: 1px 1px 1px 1px #bd2130;
+  color: white;
+}
