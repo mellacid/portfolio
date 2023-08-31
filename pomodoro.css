@@ -1,20 +1,74 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+* {
   margin: 0;
-  background-color: rgb(139, 205, 255);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 225, 1);
 }
 
 header {
   text-align: center;
+  width: 100%;
+}
+.nav-container {
+  background-color: rgba(244, 108, 18, 0.318);
+  font-size: 1.5rem;
+  height: 50px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 400px; Beispielwert, passe es nach Bedarf an */
+  /* margin: 10px auto; Zentriert den Container horizontal */
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgba(18, 63, 244, 0.417);
+  border-radius: 5px;
+}
+
+header h1 {
+  font-size: 3rem;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
 }
 
 #timer {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 #controls {
