@@ -38,6 +38,7 @@ body {
   background-color: #007bff;
   color: white;
 }
+
 #startManualButton:hover {
   background-color: #0069d9;
   box-shadow: 1px 1px 1px 1px #0062cc;
