@@ -53,6 +53,7 @@ header h1 {
 }
 
 main {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +69,13 @@ img {
 #timer {
   font-size: 36px;
   margin: 20px;
+}
+
+.message {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  color: #ff0000; /* Farbe nach Bedarf ändern */
 }
 
 #controls {

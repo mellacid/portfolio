@@ -11,9 +11,11 @@
     <header>
       <nav class="nav-container">
         <ul>
-          <a href="index.html" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-solid fa-house"></i> Home</a
-          >
+          <li>
+            <a href="index.html" target="_blank" rel="noopener noreferrer"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
         </ul>
       </nav>
       <h1>Pomodoro Timer</h1>
@@ -21,13 +23,13 @@
     <main>
       <img src="images/egg-timer-154763_640.png" alt="egg-timer" />
       <div id="timer">25:00</div>
+      <div id="message" class="message"></div>
+      <!-- Hier wird die Nachricht angezeigt -->
       <div id="controls">
-        <div id="controls">
-          <button class="control-button" id="startButton">Start</button>
-          <button class="control-button" id="pauseButton">Pause</button>
-          <button class="control-button" id="continueButton">Continue</button>
-          <button class="control-button" id="resetButton">Reset</button>
-        </div>
+        <button class="control-button" id="startButton">Start</button>
+        <button class="control-button" id="pauseButton">Pause</button>
+        <button class="control-button" id="continueButton">Continue</button>
+        <button class="control-button" id="resetButton">Reset</button>
       </div>
     </main>
   </body>
