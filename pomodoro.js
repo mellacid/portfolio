@@ -85,7 +85,13 @@ function resetTimer() {
   pauseButton.style.display = "inline"; // Der Pause-Button wird angezeigt
 }
 
-// Eine Funktion zum Abspielen von Sounds könnte hier ergänzt werden
+// Eine Funktion zum Abspielen von Sounds
+function playSound() {
+  // Hier fügst du den Code zum Abspielen eines Sounds ein
+  // Zum Beispiel mit dem HTML5 Audio-Element:
+  const audio = new Audio("audio/sound.mp3"); // Ersetze 'sound.mp3' durch den Pfad zu deiner Sounddatei
+  audio.play();
+}
 
 // Event-Listener für die Buttons
 startButton.addEventListener("click", () => {
