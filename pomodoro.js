@@ -3,12 +3,13 @@ const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 const pauseButton = document.getElementById("pauseButton");
 const continueButton = document.getElementById("continueButton");
-const messageDisplay = document.getElementById("message"); // Element für die Nachricht
+const messageDisplay = document.getElementById("message");
 
-let pomodoroCount = 0; // Zähler für abgeschlossene Pomodoro-Einheiten
-let timeLeft = 5; // 25 Minuten in Sekunden (Standard-Pomodoro)
+let pomodoroCount = 0;
+let timeLeft = 1500; // 25 Minuten in Sekunden (Standard-Pomodoro)
 let timerInterval;
 let isPaused = false;
+let originalMessage = "Pomodoro-Modus: 25 Minuten konzentriert arbeiten!"; // Speichern der ursprünglichen Nachricht
 
 function updateTimer() {
   const minutes = Math.floor(timeLeft / 60);
@@ -17,7 +18,7 @@ function updateTimer() {
 }
 
 function showMessage(message) {
-  messageDisplay.textContent = message; // Nachricht anzeigen
+  messageDisplay.textContent = message;
 }
 
 function startTimer() {
@@ -32,14 +33,14 @@ function startTimer() {
         playSound();
         pomodoroCount++;
         if (pomodoroCount % 4 === 0) {
-          showMessage("Große Pause. Zeit für eine Pause!"); // Nachricht für große Pause
-          timeLeft = 9000; // 2 Stunden und 30 Minuten für die große Pause
+          showMessage("Große Pause. Zeit für eine Pause!");
+          timeLeft = 1500; // 25 Minuten für die große Pause
         } else {
-          showMessage("Arbeitsintervall abgeschlossen. Zeit für eine Pause!"); // Nachricht für Pomodoro-Pause
-          timeLeft = 5; // 5 Minuten Pause
+          showMessage("Arbeitsintervall abgeschlossen. Zeit für eine Pause!");
+          timeLeft = 300; // 5 Minuten Pause
         }
         updateTimer();
-        startTimer(); // Timer für die Pause starten
+        startTimer();
       }
     }
   }, 1000);
@@ -47,24 +48,28 @@ function startTimer() {
 
 function pauseTimer() {
   isPaused = true;
-  showMessage("Pause läuft..."); // Nachricht für laufende Pause
+  showMessage("Pause läuft...");
 }
 
 function continueTimer() {
   isPaused = false;
-  showMessage(""); // Nachricht löschen
-  if (pomodoroCount % 4 !== 0) {
-    showMessage("Pomodoro-Modus: 25 Minuten konzentriert arbeiten!"); // Neue Nachricht für Pomodoro-Modus
+  if (pomodoroCount % 4 === 0) {
+    showMessage(originalMessage); // Zeige die ursprüngliche Nachricht für Große Pause
+  } else {
+    showMessage("Arbeitsintervall abgeschlossen. Zeit für eine Pause!"); // Zeige die Nachricht für Pomodoro-Pause
   }
-  startTimer(); // Fortsetzen startet den Timer erneut
 }
 
 function resetTimer() {
   clearInterval(timerInterval);
-  pomodoroCount = 0; // Zurücksetzen des Pomodoro-Zählers
+  pomodoroCount = 0;
   timeLeft = 1500; // Zurücksetzen auf 25 Minuten (Standard-Pomodoro)
   updateTimer();
-  showMessage(""); // Nachricht löschen
+  isPaused = false;
+  showMessage("");
+  startButton.style.display = "inline"; // Zeige den Start-Button
+  continueButton.style.display = "inline"; // Zeige den Weiter-Button
+  pauseButton.style.display = "inline"; // Zeige den Pause-Button
 }
 
 function playSound() {
@@ -73,14 +78,22 @@ function playSound() {
 
 startButton.addEventListener("click", () => {
   startTimer();
+  showMessage(originalMessage);
+  startButton.style.display = "none"; // Verstecke den Start-Button
+  continueButton.style.display = "none"; // Verstecke den Weiter-Button
+  pauseButton.style.display = "inline"; // Zeige den Pause-Button
 });
 
 pauseButton.addEventListener("click", () => {
   pauseTimer();
+  pauseButton.style.display = "none"; // Verstecke den Pause-Button
+  continueButton.style.display = "inline"; // Zeige den Weiter-Button
 });
 
 continueButton.addEventListener("click", () => {
   continueTimer();
+  continueButton.style.display = "none"; // Verstecke den Weiter-Button
+  pauseButton.style.display = "inline"; // Zeige den Pause-Button
 });
 
 resetButton.addEventListener("click", resetTimer);
