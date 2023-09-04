@@ -86,6 +86,7 @@ nav a:hover {
 
 .images {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -94,10 +95,26 @@ nav a:hover {
 }
 
 .images img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10%;
   border: 1px solid white;
   box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
+}
+
+@media screen and (min-width: 768px) {
+  .about-me {
+    width: 600px;
+    height: 400px;
+  }
+
+  .images {
+    flex-direction: row;
+  }
+
+  .images img {
+    width: 250px;
+    height: 250px;
+  }
 }
