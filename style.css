@@ -29,13 +29,13 @@ h1 {
 /* Navigationsleisten-Styles */
 .nav-container {
   background-color: rgba(18, 63, 244, 0.318);
+  width: 100%;
   font-size: 1.5rem;
   height: 50px;
   position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* max-width: 400px; Beispielwert, passe es nach Bedarf an */
   margin: 10px auto; /* Zentriert den Container horizontal */
   border-radius: 5px;
 }
@@ -95,15 +95,15 @@ nav a:hover {
 }
 
 .images img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10%;
   border: 1px solid white;
   box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1062px) {
   .about-me {
     width: 600px;
     height: 400px;
