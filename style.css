@@ -90,6 +90,14 @@ nav a:hover {
   margin-bottom: 10px; /* Abstand zwischen den <span>-Elementen */
 }
 
+footer {
+  position: absolute;
+  top: 92%;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .nav-container {
     width: 200px;
