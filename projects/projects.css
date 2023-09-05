@@ -47,7 +47,6 @@ h1 {
 /* Navigationsleisten-Styles */
 .nav-container {
   font-size: 1.5rem;
-  position: sticky;
   display: flex;
   flex-direction: column; /* Navigation als Spalte */
   justify-content: flex-start; /* Von oben beginnen */
@@ -89,5 +88,16 @@ nav p a[data-tooltip]:hover::before {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.pomodoro-page {
+  position: fixed;
+  top: 40%;
+  left: 75%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
   white-space: nowrap;
 }
