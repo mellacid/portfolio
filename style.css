@@ -1,6 +1,8 @@
 /* Import von Font Awesome am Anfang der CSS-Datei */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,200;1,300&display=swap");
+
 /* Reset für alle Elemente */
 * {
   margin: 0;
@@ -11,9 +13,10 @@
 /* Grundlegende Styles für das HTML und den Body */
 html,
 body {
+  font-family: "Montserrat", sans-serif;
   height: 100%;
   width: 100%;
-  background-color: rgb(139, 205, 255);
+  background-color: rgb(30, 55, 74);
 }
 
 /* Header-Styles */
@@ -22,6 +25,7 @@ header {
 }
 
 h1 {
+  text-align: left;
   font-size: 3rem;
   padding: 10px;
 }
@@ -45,6 +49,10 @@ nav ul {
   display: flex;
   gap: 50px;
   padding: 0;
+}
+
+i {
+  font-size: 1.3rem;
 }
 
 nav a {
@@ -74,16 +82,6 @@ nav a:hover {
   text-align: justify;
 }
 
-.code-block {
-  background-color: #f4f4f4;
-  padding: 10px;
-  font-family: "Courier New", monospace;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  white-space: pre-wrap;
-}
-
 .images {
   display: flex;
   flex-direction: column;
@@ -98,12 +96,31 @@ nav a:hover {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border-radius: 10%;
-  border: 1px solid white;
-  box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
+  border-radius: 2%;
 }
 
-@media screen and (min-width: 1062px) {
+.coding,
+.games,
+.books {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
+  .description {
+    width: 100%;
+    max-width: 250px; /* Maximalbreite für den Text */
+    text-align: left; /* Text linksbündig ausrichten */
+  }
+}
+
+/* Media Query für größere Bildschirme */
+@media screen and (min-width: 768px) {
   .about-me {
     width: 600px;
     height: 400px;
@@ -117,4 +134,45 @@ nav a:hover {
     width: 250px;
     height: 250px;
   }
+}
+
+.tooltip {
+  /* Tooltiptext-Container */
+  position: relative;
+  display: inline-block; /* Damit das Element nicht die ganze Breite einnimmt */
+  color: white;
+}
+
+.tooltip:hover .tooltiptext {
+  /* Hover-Effekt für das Tooltiptext-Element */
+  visibility: visible;
+  opacity: 1; /* Vollständig sichtbar */
+}
+
+.tooltiptext {
+  /* Tooltiptext-Element */
+  visibility: hidden; /* Tooltip wird versteckt */
+  width: 200px;
+  background-color: #33333351;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* zentriert das Tooltip zusätzlich horizontal, indem es um 50% nach links verschoben wird. */
+  opacity: 0; /* Anfangs nicht sichtbar */
+  transition: opacity 0.2s; /* Übergangseffekt */
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.code-span {
+  color: #ff0000;
 }
