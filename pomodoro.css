@@ -150,3 +150,13 @@ img {
   box-shadow: 1px 1px 1px 1px #bd2130;
   color: white;
 }
+
+footer {
+  height: 100px;
+  color: rgba(0, 0, 0, 0.505);
+  font-size: 1rem;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
