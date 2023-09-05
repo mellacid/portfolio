@@ -23,12 +23,12 @@ body {
   border: 10px solid #f5f5f5;
   background-image: conic-gradient(
     from 180deg at 50% 50%,
-    #f5f5f5 0deg,
-    #d69e9e 120deg,
-    #c26060 120deg,
-    #f14848 240deg,
-    #f42222 240deg,
-    #f80101 360deg
+    #f3f4f6 0deg,
+    #c3d3f1 120deg,
+    #8da7f4 120deg,
+    #627ff3 240deg,
+    #2e59f4 240deg,
+    #5701f8 360deg
   );
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 h1 {
-  color: #fff;
+  color: #2e59f4;
   text-align: left;
   font-size: 3rem;
   padding: 10px;
@@ -52,11 +52,11 @@ h1 {
   justify-content: flex-start; /* Von oben beginnen */
   align-items: flex-start; /* Links ausrichten */
   border-radius: 5px;
-  margin: 250px 50px;
+  margin: 100px 5px;
 }
 
 nav p {
-  color: white;
+  color: #2e59f4;
   font-size: 1.5rem;
   padding: 10px;
   margin: 10px;
@@ -68,11 +68,11 @@ nav p {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: #2e59f4;
 }
 
 nav a:hover {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.12);
+  color: #2e59f4;
+  background-color: white;
   border-radius: 5px;
 }
