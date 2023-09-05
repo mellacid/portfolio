@@ -23,12 +23,12 @@ body {
   border: 10px solid #f5f5f5;
   background-image: conic-gradient(
     from 180deg at 50% 50%,
-    #f5f5f5 0deg,
-    #d69e9e 120deg,
-    #c26060 120deg,
-    #f14848 240deg,
-    #f42222 240deg,
-    #f80101 360deg
+    #dad9d9 0deg,
+    #bab9b9 120deg,
+    #898989 120deg,
+    #505050 240deg,
+    #383838 240deg,
+    #151515 360deg
   );
 }
 
