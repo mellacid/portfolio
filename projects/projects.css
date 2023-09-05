@@ -52,7 +52,7 @@ h1 {
   justify-content: flex-start; /* Von oben beginnen */
   align-items: flex-start; /* Links ausrichten */
   border-radius: 5px;
-  margin: 250px 50px;
+  margin: 10px 5px;
 }
 
 nav p {
@@ -92,12 +92,46 @@ nav p a[data-tooltip]:hover::before {
 }
 
 .pomodoro-page {
+  font-size: 1.1rem;
+  width: 100px;
   position: fixed;
-  top: 40%;
-  left: 75%;
+  top: 50%;
+  left: 50%;
   transform: translateY(-50%);
   color: white;
   padding: 10px;
   border-radius: 5px;
-  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    width: 200px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Navigation als Spalte */
+    justify-content: flex-start; /* Von oben beginnen */
+    align-items: flex-start; /* Links ausrichten */
+    margin: 100px 5px 0;
+  }
+
+  nav p {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .pomodoro-page {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 40%;
+    left: 75%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
 }
