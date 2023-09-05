@@ -20,6 +20,7 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
   width: 100%;
+  border: 10px solid #f5f5f5;
   background-image: conic-gradient(
     from 180deg at 50% 50%,
     #f5f5f5 0deg,
@@ -73,7 +74,7 @@ nav a {
 
 nav a:hover {
   color: white;
-  background-color: rgba(18, 63, 244, 0.417);
+  background-color: rgba(0, 0, 0, 0.12);
   border-radius: 5px;
 }
 
