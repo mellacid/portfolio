@@ -3,6 +3,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,200;1,300&display=swap");
 
+:root {
+  --pad: max(20px, 4vmin);
+}
+
 /* Reset für alle Elemente */
 * {
   margin: 0;
@@ -16,7 +20,15 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
   width: 100%;
-  background-color: rgb(30, 55, 74);
+  background-image: conic-gradient(
+    from 180deg at 50% 50%,
+    #f5f5f5 0deg,
+    #d69e9e 120deg,
+    #c26060 120deg,
+    #f14848 240deg,
+    #f42222 240deg,
+    #f80101 360deg
+  );
 }
 
 /* Header-Styles */
@@ -25,6 +37,7 @@ header {
 }
 
 h1 {
+  color: #fff;
   text-align: left;
   font-size: 3rem;
   padding: 10px;
@@ -32,32 +45,30 @@ h1 {
 
 /* Navigationsleisten-Styles */
 .nav-container {
-  background-color: rgba(18, 63, 244, 0.318);
-  width: 100%;
   font-size: 1.5rem;
-  height: 50px;
   position: sticky;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto; /* Zentriert den Container horizontal */
+  flex-direction: column; /* Navigation als Spalte */
+  justify-content: flex-start; /* Von oben beginnen */
+  align-items: flex-start; /* Links ausrichten */
   border-radius: 5px;
+  margin: 250px 50px;
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 50px;
-  padding: 0;
-}
-
-i {
-  font-size: 1.3rem;
+nav p {
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 200px;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav a:hover {
@@ -66,74 +77,21 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* About-Me-Styles */
-.about-me {
-  width: 400px;
-  height: 300px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.home {
+  position: relative;
+}
+
+.home_aboutme {
+  position: absolute; /* Absolute Positionierung für das "About Me" */
+  bottom: 10px; /* 10px Abstand vom unteren Bildschirmrand */
+  right: 30px; /* 10px Abstand vom rechten Bildschirmrand */
   padding: 20px;
-  border: 1px solid white;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
-  text-align: justify;
 }
 
-.images {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-  gap: 150px;
-}
-
-.images img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 2%;
-}
-
-.coding,
-.games,
-.books {
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 5%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 1px solid white;
-  box-shadow: 5px 5px 5px 5px rgba(18, 63, 244, 0.417);
-  .description {
-    width: 100%;
-    max-width: 250px; /* Maximalbreite für den Text */
-    text-align: left; /* Text linksbündig ausrichten */
-  }
-}
-
-/* Media Query für größere Bildschirme */
-@media screen and (min-width: 768px) {
-  .about-me {
-    width: 600px;
-    height: 400px;
-  }
-
-  .images {
-    flex-direction: row;
-  }
-
-  .images img {
-    width: 250px;
-    height: 250px;
-  }
+.home_aboutme span {
+  line-height: 1rem;
+  display: block; /* Jedes <span> untereinander darstellen */
+  margin-bottom: 10px; /* Abstand zwischen den <span>-Elementen */
 }
 
 .tooltip {
