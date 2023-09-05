@@ -1,10 +1,10 @@
 # test publishing
 
-# Pomodoro Timer
+## Pomodoro Timer
 
 Dieses Projekt implementiert einen Pomodoro-Timer, der Ihnen dabei hilft, effektiv zu arbeiten, indem er Arbeitsintervalle und Pausen verwaltet.
 
-## Funktionen
+### Funktionen
 
 - **Start:** Starten Sie den Timer, um eine 25-minütige Arbeitsperiode zu beginnen.
 - **Pause:** Unterbrechen Sie den Timer, um eine Pause einzulegen.
@@ -12,11 +12,11 @@ Dieses Projekt implementiert einen Pomodoro-Timer, der Ihnen dabei hilft, effekt
 - **Große Pause:** Nach vier Arbeitsintervallen wird automatisch eine 30-minütige große Pause eingelegt.
 - **Zurücksetzen:** Starten Sie den Timer neu.
 
-## Anpassungen
+### Anpassungen
 
 Sie können die Arbeits- und Pausenzeit sowie den Sound, der am Ende eines Intervalls oder einer Pause abgespielt wird, in der JavaScript-Datei anpassen.
 
-### JavaScript-Code-Erklärung
+#### JavaScript-Code-Erklärung
 
 Der JavaScript-Code in dieser Anwendung verfügt über folgende Schlüsselfunktionen:
 
@@ -30,7 +30,7 @@ Der JavaScript-Code in dieser Anwendung verfügt über folgende Schlüsselfunkti
 
 - **Sound-Wiedergabe:** Es gibt auch eine Funktion, um Sounds abzuspielen, die Sie durch Hinzufügen einer Audio-Datei in den Projektordner definieren können.
 
-## Verwendung
+### Verwendung
 
 1. Klone dieses Repository oder laden Sie die Dateien herunter.
 2. Öffnen Sie die `index.html`-Datei in Ihrem Webbrowser.
@@ -38,11 +38,11 @@ Der JavaScript-Code in dieser Anwendung verfügt über folgende Schlüsselfunkti
 4. Verwenden Sie die Schaltflächen "Pause" und "Fortsetzen", um Pausen einzulegen und fortzusetzen.
 5. Klicken Sie auf "Reset", um den Timer zurückzusetzen.
 
-## Sound hinzufügen
+### Sound hinzufügen
 
 Wenn Sie einen Sound hinzufügen möchten, legen Sie eine Audio-Datei in den Projektordner und geben Sie den Pfad in der JavaScript-Datei an.
 
-## Autor
+### Autor
 
 Dieses Projekt wurde erstellt von Melisa Damla Becid.
 
