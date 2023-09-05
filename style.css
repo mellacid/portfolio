@@ -119,3 +119,12 @@ footer {
     transition: all 0.2s ease-in-out;
   }
 }
+footer {
+  border: 2px solid black;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.505);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
