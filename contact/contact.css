@@ -101,8 +101,9 @@ input {
 
 /* Stil für den "Send Message"-Button */
 .send-button {
-  background-color: #007bff; /* Hintergrundfarbe des Buttons */
+  background-color: #8da7f4; /* Hintergrundfarbe des Buttons */
   color: #fff; /* Textfarbe des Buttons */
+  margin-top: 15px; /* Abstand zum oberen Element */
   padding: 10px 20px; /* Innenabstand des Buttons */
   border: none; /* Kein Rahmen um den Button */
   cursor: pointer; /* Zeiger-Cursor beim Hover */
@@ -116,8 +117,8 @@ input {
 
 footer {
   color: rgb(52, 51, 51);
+  margin-top: 80px;
   width: 100%;
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
